@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import SecondComponent from './SecondComponent';
-import ThirdComponent from './ThirdComponent';
-import Prediction from './Prediction';
-import HistoricalData from './HistoricalData';
+import Prediction from './Prediction'
 import fetch from "isomorphic-fetch";
 import PredictionApp from "./PredictionApp";
-import { Navbar, Jumbotron, Button } from 'react-bootstrap';
 
 class App extends Component {
 
@@ -47,17 +42,6 @@ class App extends Component {
     }
   render() {
       console.log('Rending app.js');
-      var extraComponent = <SecondComponent/>;
-      var thirdComponent;
-      if(this.props.showExtra) {
-          thirdComponent = <ThirdComponent/>;
-          extraComponent = null;
-      }
-
-      var predictions = [];
-      if(this.props.predictions) {
-          predictions = this.props.predictions.map((pred) => <Prediction date={pred.date} value={pred.value}/>);
-      }
     return (
       <div className="App">
           <PredictionApp historicalData={this.state.historicalValue}/>

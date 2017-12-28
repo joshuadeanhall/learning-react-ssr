@@ -58,10 +58,13 @@ class Predictions extends Component {
     render() {
         const styles = {
             futurePredictionHint: {
-                fontSize: '8'
+                'font-size': '6pt',
             },
             futurePredictions: {
                 backgroundColor: 'lightblue'
+            },
+            table: {
+                textAlign: 'left'
             }
         };
 
@@ -81,11 +84,21 @@ class Predictions extends Component {
                             <input type="text" className="form-control" placeHolder="Value"  value={this.state.predictionValue} onChange={this.handleValueChange} />
                         </div>
                         <div className="col-md-4">
-                            <input type="submit" class="btn btn-primary" value="Predict the future" /><span style={styles.futurePredictionHint}>Hint it should be worth millions!</span>
+                            <input type="submit" class="btn btn-primary" value="Predict the future" /><div style={styles.futurePredictionHint}>Hint it should be worth millions!</div>
                         </div>
                     </div>
                 </form>
-                {predictionElements}
+                <table className="table" style={styles.table}>
+                    <thead>
+                        <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {predictionElements}
+                    </tbody>
+                </table>
             </div>
         );
     }

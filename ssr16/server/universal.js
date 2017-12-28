@@ -10,7 +10,6 @@ const {StaticRouter} = require('react-router-dom');
 const {default: App} = require('../src/PredictionApp');
 
 module.exports = function universalLoader(req, res) {
-    console.log('doing something here!');
     const filePath = path.resolve(__dirname, '..', 'build', 'index.html');
 
     fs.readFile(filePath, 'utf8', (err, htmlData)=>{
@@ -44,7 +43,6 @@ module.exports = function universalLoader(req, res) {
                 );
 
                 if (context.url) {
-                    console.log('dont know');
                     // Somewhere a `<Redirect>` was rendered
                     res.redirect(301, context.url)
                 } else {

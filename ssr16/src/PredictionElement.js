@@ -6,11 +6,10 @@ class PredictionElement extends Component {
   render() {
       console.log('Rending PredictionElement.js');
     return (
-      <div className="CustomComponent">
-        <p className="App-intro">
-            <span>{this.props.date}</span> <span>{this.props.value}</span>
-        </p>
-      </div>
+      <tr>
+          <td>{this.props.date}</td>
+          <td>{this.props.value}</td>
+      </tr>
     );
   }
 }

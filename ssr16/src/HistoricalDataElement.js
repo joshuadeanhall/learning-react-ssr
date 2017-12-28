@@ -5,7 +5,10 @@ import './App.css';
 class HistoricalDataElement extends Component {
   render() {
     return (
-      <li>{this.props.data.date} - {this.props.data.value}</li>
+        <tr>
+          <td>{this.props.data.date}</td>
+          <td>{this.props.data.value}</td>
+        </tr>
     );
   }
 }

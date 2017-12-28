@@ -44,14 +44,21 @@ class PredictionApp extends Component {
           {/*<img src={logo} className="App-logo" alt="logo" />*/}
           <h1 className="App-title">Welcome to Bitcoin Price Predictions.</h1>
         </header>
-        <p className="App-intro">
-          To get started232, edit <code>src/App.js</code> and save to reload.
-        </p>
-          <div className="row">
-              <div className="col-md-4">
-                <HistoricalData historicalData={this.props.historicalData} />
+          <div className="container">
+              <div className="row">
+                  <div className="col-md-4">
+                      Historical Data
+                  </div>
+                  <div className="col-md-8">
+                      Predictions
+                  </div>
               </div>
-              <FuturePredictions />
+              <div className="row">
+                  <div className="col-md-4">
+                    <HistoricalData historicalData={this.props.historicalData} />
+                  </div>
+                  <FuturePredictions />
+              </div>
           </div>
       </div>
     );
