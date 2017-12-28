@@ -1,4 +1,4 @@
-FROM node:carbon
+FROM stefanscherer/node-windows
 
 CMD echo 'Starting build'
 # Create app directory
