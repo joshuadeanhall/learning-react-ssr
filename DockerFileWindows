@@ -25,6 +25,6 @@ CMD echo '-----------------------------------'
 CMD echo '-----------------------------------'
 CMD echo 'Starting yarn build'
 RUN yarn build
-
+ENV NODE_ENV development
+RUN npm run start:server:windows
 EXPOSE 3002
-CMD [ "npm", "run", "start:server" ]

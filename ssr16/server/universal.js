@@ -38,7 +38,7 @@ module.exports = function universalLoader(req, res) {
 
                 const context = {};
                 const markup = renderToString(
-                    <App showExtra={false} historicalData={historicalData}>
+                    <App historicalData={historicalData}>
                     </App>
                 );
 

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Prediction from './Prediction'
 import fetch from "isomorphic-fetch";
 import PredictionApp from "./PredictionApp";
 

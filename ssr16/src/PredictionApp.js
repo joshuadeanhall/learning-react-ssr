@@ -25,7 +25,7 @@ class PredictionApp extends Component {
     }
 
     log(message) {
-        console.log('App.js ' + message);
+        console.log('PredictionApp.js ' + message);
     }
 
     constructor() {
@@ -33,7 +33,7 @@ class PredictionApp extends Component {
         this.state = {predictionData: []};
     }
   render() {
-      console.log('Rending app.js');
+      console.log('Rending PredictionApp.js');
       var predictions = [];
       if(this.props.predictions) {
           predictions = this.props.predictions.map((pred) => <Prediction date={pred.date} value={pred.value}/>);
